@@ -92,23 +92,31 @@
 			<artifactId>cdi-api</artifactId>
 		</dependency>
 
-<dependency>
-    <groupId>org.jboss.resteasy</groupId>
-    <artifactId>resteasy-client</artifactId>
-    <version>3.0.24.Final</version>
-</dependency>
-<!-- Pour le support des représentations au format JSONs -->
-<dependency>
-    <groupId>org.jboss.resteasy</groupId>
-    <artifactId>resteasy-jackson-provider</artifactId>
-    <version>3.0.24.Final</version>
-</dependency>
-<!-- Pour le support des représentations au format XML -->
-<dependency>
-    <groupId>org.jboss.resteasy</groupId>
-    <artifactId>resteasy-jaxb-provider</artifactId>
-    <version>3.0.24.Final</version>
-</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-client</artifactId>
+			<version>3.0.24.Final</version>
+		</dependency>
+		<!-- Pour le support des représentations au format JSONs -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>3.0.24.Final</version>
+		</dependency>
+		<!-- Pour le support des représentations au format XML -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxb-provider</artifactId>
+			<version>3.0.24.Final</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 
