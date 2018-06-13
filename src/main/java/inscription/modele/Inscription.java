@@ -8,6 +8,9 @@ public class Inscription {
 	private String motDePasse;
 	private Date date;
 	
+	public Inscription() {
+	}
+	
 	public Inscription(String email, String password) {
 		this.email = email;
 		this.motDePasse = password;

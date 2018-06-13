@@ -91,6 +91,25 @@
 			<groupId>javax.enterprise</groupId>
 			<artifactId>cdi-api</artifactId>
 		</dependency>
+
+<dependency>
+    <groupId>org.jboss.resteasy</groupId>
+    <artifactId>resteasy-client</artifactId>
+    <version>3.0.24.Final</version>
+</dependency>
+<!-- Pour le support des représentations au format JSONs -->
+<dependency>
+    <groupId>org.jboss.resteasy</groupId>
+    <artifactId>resteasy-jackson-provider</artifactId>
+    <version>3.0.24.Final</version>
+</dependency>
+<!-- Pour le support des représentations au format XML -->
+<dependency>
+    <groupId>org.jboss.resteasy</groupId>
+    <artifactId>resteasy-jaxb-provider</artifactId>
+    <version>3.0.24.Final</version>
+</dependency>
+
 	</dependencies>
 
 
