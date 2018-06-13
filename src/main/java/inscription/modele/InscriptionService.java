@@ -1,17 +1,8 @@
 package inscription.modele;
 
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
-@Stateless
 public class InscriptionService {
 	
-	@PersistenceContext(unitName="inscriptionUnit")
-	private EntityManager entityManager;
-	
-	public Inscription inscrire(String email, String motDePasse, String confirmationMotDePasse, boolean approbation) 
-			throws InscriptionInvalideException {
+	public Inscription inscrire(String email, String motDePasse, String confirmationMotDePasse, boolean approbation) throws InscriptionInvalideException {
 		InscriptionInvalideException ex = new InscriptionInvalideException();
 		
 		if (email == null || ! email.contains("@")) {
@@ -30,9 +21,7 @@ public class InscriptionService {
 			throw ex;
 		}
 		
-		Inscription inscription = new Inscription(email, motDePasse);
-		entityManager.persist(inscription);
-		return inscription;
+		return new Inscription(email, motDePasse);
 	}
 	
 }

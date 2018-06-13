@@ -2,7 +2,6 @@
 
 import java.io.IOException;
 
-import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,8 +17,6 @@ import inscription.modele.InscriptionService;
 public class InscriptionControleurServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
-	@EJB
-	private InscriptionService inscriptionService;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -34,6 +31,7 @@ public class InscriptionControleurServlet extends HttpServlet{
 		String confirmationMotDePasse = req.getParameter("confirmationMotDePasse");
 		boolean approbation = Boolean.valueOf(req.getParameter("approbation"));
 		try {
+			InscriptionService inscriptionService = new InscriptionService();
 			Inscription inscription = inscriptionService.inscrire(email, motDePasse, confirmationMotDePasse, approbation);
 			req.setAttribute("inscription", inscription);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/jsp/validationInscription.jsp");
